@@ -1,0 +1,173 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user read book
+  steps:
+  - intent: read_book
+  - action: utter_read_book
+  - action: book_name_form
+  - active_loop: book_name_form
+  - slot_was_set:
+    - book_name: test1
+    - book_thoughts: test2
+  - action: utter_thanks
+
+- story: user wants to know what they have read
+  steps:
+  - slot_was_set:
+    - book_name: test
+    - book_thoughts: second test
+  - intent: check_book
+  - action: utter_check_book
+
+- story: user wants to know what they have read but they didn't read anything
+  steps:
+  - intent: check_book
+  - action: utter_check_fail
+
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
+
+- story: what the bot read
+  steps:
+  - intent: bot_reading
+  - action: utter_bot_reading
+
+- story: finding books
+  steps:
+  - intent: find_book
+  - action: utter_find_book
+
+- story: finding a reading spot
+  steps:
+  - intent: reading_spot
+  - action: utter_reading_spot
+
+- story: finding time to read
+  steps:
+  - intent: schedule
+  - action: utter_schedule
+
+- story: doesn't wanna read
+  steps:
+  - intent: dont_read
+  - action: utter_dont_read
+
+- story: user likes to write
+  steps:
+  - intent: write_book
+  - action: utter_write_book
+
+- story: general book recs
+  steps:
+  - intent: book_rec
+  - action: utter_book_rec
+
+- story: ya
+  steps:
+  - intent: ya_rec
+  - action: utter_ya_rec
+
+- story: fantasy
+  steps:
+  - intent: fantasy_rec
+  - action: utter_fantasy_rec
+
+- story: scifi 
+  steps:
+  - intent: scifi_rec
+  - action: utter_scifi_rec
+
+- story: child
+  steps:
+  - intent: child_rec
+  - action: utter_child_rec
+
+- story: hf
+  steps:
+  - intent: hf_rec
+  - action: utter_hf_rec
+
+
+- story: romance
+  steps:
+  - intent: romance_rec
+  - action: utter_romance_rec
+
+- story: horror
+  steps:
+  - intent: horror_rec
+  - action: utter_horror_rec
+
+- story: horror but they ask about lovecraft
+  steps:
+  - intent: horror_rec
+  - action: utter_horror_rec
+  - intent: lovecraft
+  - action: utter_lovecraft
+
+- story: mystery
+  steps:
+  - intent: mystery_rec
+  - action: utter_mystery_rec
+
+- story: comedy
+  steps:
+  - intent: comedy_rec
+  - action: utter_comedy_rec
+
+- story: be specific with comedy rec
+  steps:
+  - intent: be_specific
+  - action: utter_be_specific
+
+- story: serious
+  steps:
+  - intent: serious_rec
+  - action: utter_serious_rec
+
+- story: book joke
+  steps:
+  - intent: book_joke
+  - action: utter_book_joke
+
+- story: book fact
+  steps:
+  - intent: book_fact
+  - action: utter_book_fact
+
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
+

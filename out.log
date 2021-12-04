@@ -1,0 +1,194 @@
+2021-12-02 08:34:12,152 [DEBUG]  CORS: Configuring CORS with resources: {'/*': {'origins': [''], 'methods': 'DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT', 'allow_headers': ['.*'], 'expose_headers': 'filename', 'supports_credentials': True, 'max_age': None, 'send_wildcard': False, 'automatic_options': True, 'vary_header': True, 'resources': {'/*': {'origins': ''}}, 'intercept_exceptions': True, 'always_send': True}}
+2021-12-02 08:34:12,154 [DEBUG]  Available web server routes: 
+/webhooks/rest                                     GET                            custom_webhook_CmdlineInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_CmdlineInput.receive
+/                                                  GET                            hello
+2021-12-02 08:34:12,154 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-12-02 08:34:12,154 [DEBUG]  Using the default number of Sanic workers (1).
+2021-12-02 08:34:12,164 [INFO ]  Loading model models/20211202-083326.tar.gz...
+2021-12-02 08:34:12,499 [DEBUG]  Extracted model to '/var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmpebw3cp_4'.
+2021-12-02 08:34:12,532 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-12-02 08:34:12,714 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-12-02 08:34:12,719 [INFO ]  Enabling coroutine debugging. Loop id 140682793058320.
+2021-12-02 08:34:12,736 [INFO ]  Loading model models/20211202-083326.tar.gz...
+2021-12-02 08:34:13,044 [DEBUG]  Extracted model to '/var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5qr642j0'.
+2021-12-02 08:34:13,298 [DEBUG]  Loading the model from /var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5qr642j0/nlu/component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-12-02 08:34:13,414 [DEBUG]  Following metrics will be logged during training: 
+2021-12-02 08:34:13,415 [DEBUG]    t_loss (total loss)
+2021-12-02 08:34:13,415 [DEBUG]    i_acc (intent acc)
+2021-12-02 08:34:13,415 [DEBUG]    i_loss (intent loss)
+2021-12-02 08:34:21,224 [DEBUG]  Finished loading the model.
+2021-12-02 08:34:21,225 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path '/var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5qr642j0/nlu' doesn't exist?
+2021-12-02 08:34:21,231 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-12-02 08:34:21,231 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-12-02 08:34:21,553 [DEBUG]  Extracted model to '/var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5s5v85x3'.
+2021-12-02 08:34:21,612 [DEBUG]  Loading the model from /var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5s5v85x3/core/policy_2_UnexpecTEDIntentPolicy/unexpected_intent_policy.tf_model with finetune_mode=False...
+2021-12-02 08:34:28,269 [DEBUG]  Finished loading the model.
+2021-12-02 08:34:28,270 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2021-12-02 08:34:28,272 [DEBUG]  Loading the model from /var/folders/9c/sbxfj_j90dd5sfgvyppf5s5m0000gn/T/tmp5s5v85x3/core/policy_3_TEDPolicy/ted_policy.tf_model with finetune_mode=False...
+2021-12-02 08:34:34,173 [DEBUG]  Finished loading the model.
+2021-12-02 08:34:34,177 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-12-02 08:34:34,177 [INFO ]  Rasa server is up and running.
+2021-12-02 08:34:40,091 [DEBUG]  Issuing ticket for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:40,091 [DEBUG]  Acquiring lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:40,091 [DEBUG]  Acquired lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:40,091 [DEBUG]  Could not find tracker for conversation ID '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:40,092 [DEBUG]  Starting a new session for conversation ID '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:40,094 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-02 08:34:40,094 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x7ff33117ff70>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-12-02 08:34:40,095 [DEBUG]  Current slot values: 
+	book_name: None
+	book_thoughts: None
+	session_started_metadata: None
+2021-12-02 08:34:40,271 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-02 08:34:40,271 [DEBUG]  Adding following selector key to message property: default
+2021-12-02 08:34:40,271 [DEBUG]  Received user message 'hello' with intent '{'id': -1288303168886421620, 'name': 'greet', 'confidence': 0.9954483509063721}' and entities '[]'
+2021-12-02 08:34:40,271 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-12-02 08:34:40,272 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-12-02 08:34:40,272 [DEBUG]  There is a memorised next action 'utter_greet'
+2021-12-02 08:34:40,272 [DEBUG]  Current tracker state:
+[state 1] user text: hello | previous action name: action_listen
+2021-12-02 08:34:40,272 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:40,272 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+2021-12-02 08:34:40,273 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:40,514 [DEBUG]  Querying for intent `greet`.
+2021-12-02 08:34:40,514 [DEBUG]  Score for intent `greet` is `1.9579631090164185`, while threshold is `-0.01695069670677185`.
+2021-12-02 08:34:40,514 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('child_rec', -1.5064435), ('mood_great', -1.3853862), ('affirm', -1.2232893), ('fantasy_rec', 1.8521416), ('greet', 1.9579631)]`.
+2021-12-02 08:34:40,519 [DEBUG]  TED predicted 'utter_greet' based on user intent.
+2021-12-02 08:34:40,519 [DEBUG]  Made prediction using user intent.
+2021-12-02 08:34:40,519 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-02 08:34:40,520 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-12-02 08:34:40,520 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2021-12-02 08:34:40,520 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff3311a24f0>]'.
+2021-12-02 08:34:40,521 [DEBUG]  Action 'utter_greet' ended with events '[BotUttered('Hey! How are you?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_greet"}, 1638462880.5208662)]'.
+2021-12-02 08:34:40,521 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-12-02 08:34:40,521 [DEBUG]  There is a memorised next action 'action_listen'
+2021-12-02 08:34:40,522 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+2021-12-02 08:34:40,522 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:40,522 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered` or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-02 08:34:40,528 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-02 08:34:40,528 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-12-02 08:34:40,529 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-02 08:34:40,529 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-02 08:34:40,529 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-02 08:34:40,529 [DEBUG]  Deleted lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:41,790 [DEBUG]  Issuing ticket for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:41,791 [DEBUG]  Acquiring lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:41,791 [DEBUG]  Acquired lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:41,791 [DEBUG]  Recreating tracker for id '081bd8eebafc42fdbd7b8b842bd43381'
+2021-12-02 08:34:41,803 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-02 08:34:41,803 [DEBUG]  Adding following selector key to message property: default
+2021-12-02 08:34:41,803 [DEBUG]  Received user message 'good' with intent '{'id': -5910232605979612498, 'name': 'mood_great', 'confidence': 0.7542476654052734}' and entities '[]'
+2021-12-02 08:34:41,804 [DEBUG]  Logged UserUtterance - tracker now has 9 events.
+2021-12-02 08:34:41,804 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+2021-12-02 08:34:41,805 [DEBUG]  There is a memorised next action 'utter_happy'
+2021-12-02 08:34:41,805 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user text: good | previous action name: action_listen
+2021-12-02 08:34:41,805 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:41,805 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+2021-12-02 08:34:41,806 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:41,814 [DEBUG]  Querying for intent `mood_great`.
+2021-12-02 08:34:41,814 [DEBUG]  Score for intent `mood_great` is `1.1051605939865112`, while threshold is `-0.28995391726493835`.
+2021-12-02 08:34:41,814 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('fantasy_rec', -1.2878213), ('affirm', -1.2450244), ('deny', -1.2032824), ('mood_great', 1.1051606), ('mood_unhappy', 1.2551179)]`.
+2021-12-02 08:34:41,823 [DEBUG]  TED predicted 'utter_happy' based on user intent.
+2021-12-02 08:34:41,824 [DEBUG]  Made prediction using user intent.
+2021-12-02 08:34:41,824 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-02 08:34:41,824 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-12-02 08:34:41,824 [DEBUG]  Predicted next action 'utter_happy' with confidence 1.00.
+2021-12-02 08:34:41,825 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff331192f70>]'.
+2021-12-02 08:34:41,825 [DEBUG]  Action 'utter_happy' ended with events '[BotUttered('Great, carry on!', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_happy"}, 1638462881.825067)]'.
+2021-12-02 08:34:41,826 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+[state 4] user intent: mood_great | previous action name: utter_happy
+2021-12-02 08:34:41,826 [DEBUG]  There is a memorised next action 'action_listen'
+2021-12-02 08:34:41,826 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+[state 4] user intent: mood_great | previous action name: utter_happy
+2021-12-02 08:34:41,827 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:41,827 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered` or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-02 08:34:41,836 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-02 08:34:41,836 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy.
+2021-12-02 08:34:41,837 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-02 08:34:41,837 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-02 08:34:41,837 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-02 08:34:41,838 [DEBUG]  Deleted lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:48,917 [DEBUG]  Issuing ticket for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:48,917 [DEBUG]  Acquiring lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:48,917 [DEBUG]  Acquired lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:34:48,917 [DEBUG]  Recreating tracker for id '081bd8eebafc42fdbd7b8b842bd43381'
+2021-12-02 08:34:48,929 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-12-02 08:34:48,930 [DEBUG]  Adding following selector key to message property: default
+2021-12-02 08:34:48,930 [DEBUG]  Received user message 'i want a fantasy book' with intent '{'id': -2965693665718730117, 'name': 'fantasy_rec', 'confidence': 0.9927862286567688}' and entities '[]'
+2021-12-02 08:34:48,931 [DEBUG]  Logged UserUtterance - tracker now has 14 events.
+2021-12-02 08:34:48,931 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: action_listen
+[state 1] user intent: greet | previous action name: utter_greet
+[state 2] user intent: mood_great | previous action name: action_listen
+[state 3] user intent: mood_great | previous action name: utter_happy
+[state 4] user intent: fantasy_rec | previous action name: action_listen
+2021-12-02 08:34:48,932 [DEBUG]  There is no memorised next action
+2021-12-02 08:34:48,932 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+[state 4] user intent: mood_great | previous action name: utter_happy
+[state 5] user text: i want a fantasy book | previous action name: action_listen
+2021-12-02 08:34:48,932 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:48,933 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+[state 4] user intent: mood_great | previous action name: utter_happy
+[state 5] user intent: fantasy_rec | previous action name: action_listen
+2021-12-02 08:34:48,933 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:48,943 [DEBUG]  Querying for intent `fantasy_rec`.
+2021-12-02 08:34:48,943 [DEBUG]  Score for intent `fantasy_rec` is `2.0932624340057373`, while threshold is `-0.5072193145751953`.
+2021-12-02 08:34:48,943 [DEBUG]  Top 5 intents (in ascending order) that are likely here are: `[('mood_great', -1.5180138), ('child_rec', -1.4600804), ('affirm', -1.3000143), ('fantasy_rec', 2.0932624), ('greet', 2.1973433)]`.
+2021-12-02 08:34:48,954 [DEBUG]  TED predicted 'utter_fantasy_rec' based on user intent.
+2021-12-02 08:34:48,955 [DEBUG]  Made prediction using user intent.
+2021-12-02 08:34:48,955 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-12-02 08:34:48,955 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-02 08:34:48,955 [DEBUG]  Predicted next action 'utter_fantasy_rec' with confidence 0.95.
+2021-12-02 08:34:48,956 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x7ff3272a7610>]'.
+2021-12-02 08:34:48,956 [DEBUG]  Action 'utter_fantasy_rec' ended with events '[BotUttered('I really liked Ninth House by Leigh Bardugo. Kinda spooky, kinda edgy, lots of fun.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_fantasy_rec"}, 1638462888.95623)]'.
+2021-12-02 08:34:48,957 [DEBUG]  Current tracker state:
+[state 0] user intent: greet | previous action name: utter_greet
+[state 1] user intent: mood_great | previous action name: action_listen
+[state 2] user intent: mood_great | previous action name: utter_happy
+[state 3] user intent: fantasy_rec | previous action name: action_listen
+[state 4] user intent: fantasy_rec | previous action name: utter_fantasy_rec
+2021-12-02 08:34:48,958 [DEBUG]  There is no memorised next action
+2021-12-02 08:34:48,958 [DEBUG]  Current tracker state:
+[state 1] user intent: greet | previous action name: action_listen
+[state 2] user intent: greet | previous action name: utter_greet
+[state 3] user intent: mood_great | previous action name: action_listen
+[state 4] user intent: mood_great | previous action name: utter_happy
+[state 5] user intent: fantasy_rec | previous action name: action_listen
+[state 6] user intent: fantasy_rec | previous action name: utter_fantasy_rec
+2021-12-02 08:34:48,958 [DEBUG]  There is no applicable rule.
+2021-12-02 08:34:48,959 [DEBUG]  Skipping predictions for UnexpecTEDIntentPolicy as either there is no event of type `UserUttered` or there is an event of type `ActionExecuted` after the last `UserUttered`.
+2021-12-02 08:34:48,969 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-12-02 08:34:48,970 [DEBUG]  Predicted next action using policy_3_TEDPolicy.
+2021-12-02 08:34:48,970 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2021-12-02 08:34:48,971 [DEBUG]  Policy prediction ended with events '[]'.
+2021-12-02 08:34:48,971 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-12-02 08:34:48,971 [DEBUG]  Deleted lock for conversation '081bd8eebafc42fdbd7b8b842bd43381'.
+2021-12-02 08:35:12,318 [INFO ]  Killing Sanic server now.

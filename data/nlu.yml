@@ -1,0 +1,322 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so saad
+    - so sad
+
+- intent: read_book
+  examples: |
+    - i liked a book i read
+    - i liked this book
+    - i enjoyed a book
+    - i loved a book
+    - i loved this book
+    - i thought a book was good
+    - a book was good
+    - i read a book
+    - i did not like a book
+    - just read a book
+    - finished reading a book
+
+
+- intent: bot_reading
+  examples: |
+    - what have you read
+    - what did you read
+    - how much have you read
+    - what was the last book you read
+    - when was the last time you read
+    - do you read
+    - can you read books
+    - do you like to read
+
+- intent: find_book
+  examples: |
+    - where can i find books
+    - where can i buy books
+    - where to get books
+    - where to find book
+    - where to purchase
+    - who do i get books from
+    - where do i get books from
+
+- intent: reading_spot
+  examples: |
+    - where can i read books
+    - where should i read books
+    - where to read books
+    - where will i read
+    - where to read
+    - where do you read
+    - place to read books
+
+- intent: schedule
+  examples: |
+    - when can i read
+    - i am too busy to read
+    - when do people read
+    - when should i read
+    - i cannot read right now
+    - when to read
+    - good time to read
+
+- intent: dont_read
+  examples: |
+    - i don't like books
+    - i don't like to read
+    - i don't know how to read 
+    - i don't want to read
+    - books are bad
+    - i hate reading
+    - reading is bad
+
+- intent: write_book
+  examples: |
+    - i want to write a book
+    - i am writing a book
+    - i am an author
+    - i write books
+    - i write stories
+    - i want to write a story
+    - i like writing
+    - i want to write more
+    - i write fanfiction
+
+- intent: book_rec
+  examples: |
+    - what book should i read
+    - what to read
+    - what book to read
+    - what book recommendations do you have
+    - book recommendation
+    - what book do you recommend
+    - what can i read
+    - give me a recommendation
+
+- intent: fantasy_rec
+  examples: |
+    - i want a fantasy book 
+    - fantasy book recommendation
+    - i like fantasy books 
+    - i read fantasy books
+    - what fantasy books should i read
+    - i like harry potter
+    - i like lord of the rings
+
+- intent: scifi_rec
+  examples: |
+    - i want a sci-fi book 
+    - sci-fi book recommendation
+    - i like sci-fi books 
+    - i read sci-fi books
+    - what sci-fi books should i read
+    - i like star wars
+    - i like ender's game
+
+- intent: ya_rec
+  examples: |
+    - i want a young adult book 
+    - young adult book recommendation
+    - i like young adult books 
+    - i read young adult books
+    - what young adult books should i read
+    - i like percy jackson
+    - i like the hunger games
+
+- intent: child_rec
+  examples: |
+    - i want a book for kids 
+    - kids book recommendation
+    - i like kid books 
+    - i read kid books
+    - what kid books should i read
+    - i like the very hungry caterpillar
+    - i like goldilocks
+
+- intent: hf_rec
+  examples: |
+    - i want a historical fiction book
+    - historical fiction book recommendation
+    - i like historical fiction books 
+    - i read historical fiction books
+    - what historical fiction books should i read
+    - i like war and peace
+    - i like a tale of two cities
+
+- intent: romance_rec
+  examples: |
+    - i want a romance book
+    - romance book recommendation
+    - i like romance books 
+    - i read romance books
+    - what romance books should i read
+    - i like twilight
+    - i like gone with the wind
+
+- intent: horror_rec
+  examples: |
+    - i want a horror book
+    - horror book recommendation
+    - i like horror books 
+    - i read horror books
+    - what horror books should i read
+    - i like the stand
+    - i like the call of cthulhu
+
+- intent: mystery_rec
+  examples: |
+    - i want a mystery book
+    - mystery book recommendation
+    - i like mystery books 
+    - i read mystery books
+    - what mystery books should i read
+    - i like murder on the orient express
+    - i like encyclopedia brown
+
+- intent: comedy_rec
+  examples: |
+    - i want a comedy book
+    - comedy book recommendation
+    - i like comedy books 
+    - i read comedy books
+    - what comedy books should i read
+    - i like hitchhiker's guide to the galaxy
+    - i like catch-22
+
+- intent: serious_rec
+  examples: |
+    - i want a serious book
+    - serious book recommendation
+    - i like serious books 
+    - i read serious books
+    - what serious books should i read
+
+- intent: book_joke
+  examples: |
+    - tell me a joke about books
+    - tell me a joke
+    - i like jokes
+    - what's a good book joke
+    - book joke
+
+- intent: book_fact
+  examples: |
+    - tell me a book fact
+    - what book fact do you know
+    - tell me a fun fact
+    - tell me about books
+    - book fact
+    - fun fact
+
+
+- intent: help
+  examples: |
+    - what can you do
+    - help me
+    - help
+    - what are you for
+
+- intent: check_book
+  examples: |
+    - what books have i read
+    - what was the last book i read
+    - what did i read
+    - what have i read
+
+- intent: be_specific
+  examples: |
+    - can you pick one
+    - be specific 
+    - choose one for me
+    - pick one for me
+    - be more specific
+    - please be specific
+
+- intent: lovecraft
+  examples: |
+    - lovecraft was racist
+    - what did lovecraft do
+    - what do you mean racist
+    - he wasn't racist
+    - tell me about lovecraft
+

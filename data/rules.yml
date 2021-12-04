@@ -1,0 +1,34 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Activate form
+  steps:
+  - intent: read_book
+  - action: utter_read_book
+  - action: book_name_form
+  - active_loop: book_name_form
+  wait_for_user_input: false
+
+- rule: tell them what they've read if they've told us
+  condition:
+  - slot_was_set:
+    - book_name
+  steps:
+  - intent: check_book
+  - action: utter_check_book
+
+- rule: if book name not provided, tell them to do that
+  condition:
+  - slot_was_set:
+    - book_name: null
+  steps:
+  - intent: check_book
+  - action: utter_check_fail
+
+

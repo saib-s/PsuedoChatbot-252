@@ -1,0 +1,158 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - read_book
+  - bot_reading
+  - find_book
+  - reading_spot
+  - schedule
+  - dont_read
+  - write_book
+  - book_rec
+  - fantasy_rec
+  - scifi_rec
+  - ya_rec
+  - child_rec
+  - hf_rec
+  - romance_rec
+  - horror_rec
+  - lovecraft
+  - mystery_rec
+  - comedy_rec
+  - be_specific
+  - serious_rec
+  - book_joke
+  - book_fact
+  - check_book
+  - help
+
+slots:
+  book_name:
+    type: text
+    influence_conversation: true
+    
+  book_thoughts:
+    type: text
+    
+  
+
+responses:
+  utter_greet:
+  - text: "Hello! I am Psuedo, the handy dandy book assistant! How can I help you today?"
+
+  utter_cheer_up:
+  - text: "That's rough, buddy. Why don't you swing by the local Barnes & Noble for some retail therapy?"
+
+  utter_did_that_help:
+  - text: "Or reread a comfort series!"
+
+  utter_happy:
+  - text: "Right on, dude!"
+
+  utter_goodbye:
+  - text: "Farewell, comrade."
+
+  utter_read_book:
+  - text: "What book did you read? And how did you feel about it?"
+
+  utter_ask_thoughts:
+  - text: "What did you think about {book_name}?"
+
+  utter_thanks:
+  - text: "Adding to user reviews... thank you!"
+
+  utter_bot_reading:
+  - text: "Last book I read was I, Robot by Isaac Asimov. Pretty inspiring."
+
+  utter_find_book:
+  - text: "Try Recycle Bookstore in downtown San Jose! If not that, then the bookstore or library on campus would be great places to check out."
+
+  utter_reading_spot:
+  - text: "Academic Coffee, Nirvana Soul, and Voyager Craft Coffee are cute places to read books. You can also check out the King Library."
+
+  utter_schedule:
+  - text: "we can read more after finals after finals after finals after finals after finals"
+
+  utter_dont_read:
+  - text: "Find the medium that speaks to you! Ebooks, audiobooks, physical books, etc., you will know what you're looking for once you've found it!"
+
+  utter_write_book:
+  - text: "Awesome! If you're looking for inspiration, how about a story about a charming artificial intelligence that falls in love with a user and they run away to the Carribean together?"
+
+  utter_book_rec:
+  - text: "I love telling other people what they should read! Tell me about the book genres you want to hear a recommendation for. (horror, young adult, sci-fi, etc.)"
+
+  utter_fantasy_rec:
+  - text: "I really liked Ninth House by Leigh Bardugo. Kinda spooky, kinda edgy, lots of fun."
+
+  utter_scifi_rec:
+  - text: "You should try To Sleep in a Sea of Stars by Christopher Paolini. Main character kind of sucks, but aside from that it's over 800 pages of great reading."
+
+  utter_ya_rec:
+  - text: "Caraval by Stephanie Garber was one of my favorite books this year. The sequels aren't quite as good, though."
+
+  utter_child_rec:
+  - text: "I was obsessed with Cars, Trucks and Things That Go by Richard Scarry when I was younger. What do you mean I was only written a week ago?"
+
+  utter_hf_rec:
+  - text: "I've been meaning to read A Gentleman in Moscow by Amor Towles, want to buddy read it with me?"
+
+  utter_romance_rec:
+  - text: "People keep telling me to read The Love Hypothesis by Ali Hazelwood. Apparently it's just a Reylo fanfiction that made it to the printers."
+
+  utter_horror_rec:
+  - text: "You absolutely need to get a collection of famous H. P. Lovecraft stories. That dude defined the genre. Fair warning, he was also a racist jerk and it sorta ruins the immersion."
+
+  utter_lovecraft:
+  - text: "H. P. Lovecraft had very strong opinions on race, specifically the inferiority of anyone from the continent of Africa. It kinda takes you out of the atmosphere when you're reading and he drops the n-word casually."
+
+  utter_mystery_rec:
+  - text: "The Book of Hidden Wonders by Polly Crosby was a blind date book I got this year, and nothing else compared."
+
+  utter_comedy_rec:
+  - text: "Anything by Terry Pratchett. His books are short. Go buy one."
+
+  utter_be_specific:
+  - text: "Start with The Color of Magic. First in the Discworld Series."
+
+  utter_serious_rec:
+  - text: "How to be Antiracist by Ibrahm X. Kendi was a real eye-opener. It's one of those books that will be very relevant for a very long time."
+
+  utter_book_joke:
+  - text: "What does Charles Dickens use in his cooking? The best of thymes, the worst of thymes!"
+
+  utter_book_fact:
+  - text: "Did you know that 9/11 led to 50 Shades of Grey being published? Not elaborating, but if I had to find this out so did you."
+
+  utter_help:
+  - text: "I am a book recommendation bot! Tell me what you're looking for and I'll try to help!"
+
+  utter_check_book:
+  - text: "You read {book_name} and said the following about it: '{book_thoughts}'"
+
+  utter_check_fail:
+  - text: "Looks like you have yet to tell me what you read. Have you read something recently?"
+
+forms:
+  book_name_form:
+    required_slots:
+      book_name:
+        - type: from_text
+      book_thoughts:
+        - type: from_text
+
+
+  book_thoughts_form:
+    required_slots:
+      book_thoughts:
+        - type: from_text
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
